@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import './css/CatApp.css';
+import './css/Nyeow.css';
 import Menu from './UI/Menu';
 
 const CatApp = () => {
