@@ -7,7 +7,8 @@ const Menu = () => {
 
     return (
         <div id="menu-container">
-            <Account></Account>
+            {/* <Account></Account> */}
+            <Controls></Controls>
             <img id="menu-background" src="/imgs/Notebook Menu.png" draggable="false" alt=""/>
         </div>
     );

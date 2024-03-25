@@ -13,7 +13,7 @@ export function togglePasswordView(passwordElementName, buttonElementName) {
 }
 
 // REQUEST: Send login request to server for verifification.
-export function sendLoginRequest(usernameElement, passwordElement) {
+export async function sendLoginRequest(usernameElement, passwordElement) {
     const usernameValue = document.getElementById(usernameElement).value;
     const passwordValue = document.getElementById(passwordElement).value;
     const loginRequest = {
@@ -22,29 +22,27 @@ export function sendLoginRequest(usernameElement, passwordElement) {
     };
 
     // Send request to server
-    fetch('http://localhost:3001/api/login', {
+    const res = await fetch('http://localhost:3001/api/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(loginRequest),
     })
-    .then(response => {
-        // Success (~200 range)
-        if (response.ok) {
-            console.log('Login successful!');
-        } else {
-            console.error('Login failed:', response);
-            throw new Error('Login failed');
-        }
-    })
-    .catch(error => {
-        console.error('Error sending login request:', error);
-    });
+
+    // Success (~200 range)
+    if (res.ok) {
+        console.log('Client Message: Login successful!');
+        return true;
+    } else {
+        console.error('Login failed:', res);
+        throw new Error('Login failed');
+    }
+
 }
 
 // REQUEST: Send signup request to server for encryption and storage.
-export function sendSignupRequest(usernameElement, passwordElement) {
+export async function sendSignupRequest(usernameElement, passwordElement) {
     const usernameValue = document.getElementById(usernameElement).value;
     const passwordValue = document.getElementById(passwordElement).value;
     const signupRequest = {
@@ -53,24 +51,21 @@ export function sendSignupRequest(usernameElement, passwordElement) {
     };
 
     // Send request to server
-    fetch('http://localhost:3001/api/signup', {
+    const res = await fetch('http://localhost:3001/api/signup', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(signupRequest),
     })
-    .then(response => {
-        // Success (~200 range)
-        if (response.ok) {
-            console.log('Signup successful!');
-        } else {
-            console.error('Signup failed:', response);
-            throw new Error('Signup failed');
-        }
-    })
-    .catch(error => {
-        console.error('Error sending signup request:', error);
-    });
+
+    // Success (~200 range)
+    if (res.ok) {
+        console.log('Signup successful!');
+    } else {
+        console.error('Signup failed:', res);
+        throw new Error('Signup failed');
+    }
+
 }
 

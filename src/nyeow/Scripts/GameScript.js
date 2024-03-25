@@ -69,6 +69,7 @@ function tick(cat) {
         walk(cat, targetXPosition, targetYPosition);
     }
 
+    // save()
 }
 
 // MISC: Get a random number

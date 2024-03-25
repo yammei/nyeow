@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "argon2": "^0.31.2",
     "cors": "^2.8.5",
+    "jsonwebtoken": "^9.0.2",
     "mysql": "^2.18.1",
     "mysql2": "^3.7.0",
     "react": "^18.2.0",
@@ -20,9 +21,12 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "https://yammei.github.io/nyeow",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -40,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }

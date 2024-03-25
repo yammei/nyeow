@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/nyeow/static/css/main.311b3017.css",
+    "main.js": "/nyeow/static/js/main.42046488.js",
+    "static/media/Inter-Bold.ttf": "/nyeow/static/media/Inter-Bold.0eaf807b1cf0eceabe0f.ttf",
+    "static/media/VarelaRound-Regular.ttf": "/nyeow/static/media/VarelaRound-Regular.e67ccd4a92677fdf8719.ttf",
+    "index.html": "/nyeow/index.html",
+    "main.311b3017.css.map": "/nyeow/static/css/main.311b3017.css.map",
+    "main.42046488.js.map": "/nyeow/static/js/main.42046488.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.311b3017.css",
+    "static/js/main.42046488.js"
+  ]
+}

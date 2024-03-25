@@ -14,7 +14,7 @@ const AnimatedButton = ({ className, idName, imgSrc, onClick }) => {
 
   const handleClick = () => {
     setIsClicked(true);
-    onClick(); // The onClick function is executed
+    onClick();
     setTimeout(() => {
       setIsClicked(false);
     }, 150);

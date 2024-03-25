@@ -5,7 +5,7 @@ import Nyeow from './nyeow/Nyeow';
 function App() {
   return (
     <Router>
-        <Link to="/nyeow">Nyeow</Link>
+        <Link to="/nyeow"></Link>
         <Routes>
           <Route path="/nyeow/*" element={<Nyeow />} />
         </Routes>
