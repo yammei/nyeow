@@ -1,6 +1,2 @@
-HELLO
-
-
-
-
+React Game Documentation
 
